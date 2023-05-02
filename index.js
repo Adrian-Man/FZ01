@@ -86,7 +86,10 @@ var csvLoader = new THREE.FileLoader();
 csvLoader.load('Output.csv', (data) => {
   console.log('Data', data);
   let rows = data.split('\r\n');
+  console.log('rows', rows);
   for (let i = 0; i < enableModule.length; i++) {
+    console.log('enableModule[i]', enableModule[i]);
+    console.log('rows[enableModule[i]]', rows[enableModule[i]]);
     dataArray.push(
       rows[enableModule[i]].split(',').map(parseFloat).map(get_color)
     );
