@@ -85,7 +85,7 @@ let dataArray = [];
 var csvLoader = new THREE.FileLoader();
 csvLoader.load('Output.csv', (data) => {
   console.log('Data', data);
-  let rows = data.split('\r\n');
+  let rows = data.split('\n');
   console.log('rows', rows);
   for (let i = 0; i < enableModule.length; i++) {
     console.log('enableModule[i]', enableModule[i]);
